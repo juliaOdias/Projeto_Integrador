@@ -2,9 +2,6 @@
 
 ## Descrição
 
-![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/d466b645-6778-4501-97d2-b8da2b0d3a11)
-
-
 PetMaps é uma aplicação destinada a moradores de São Carlos que perderam seus animais de estimação, sendo restrito a gatos ou cachorros, a intenção principal é resolver o problema da feira do rolo onde é feita a postagem de diversos animais e dificilmente se acha o dono. Com esta aplicação será possível o usuário fazer o cadastro de seus pets e aplicar a opção 'meu pet' ou 'pet encontrado', assim as pessoas poderão fazer uma busca com filtragem por cor, idade, raça, genero e afins para facilitar a localização do pet
 
 ## Requisitos Funcionais
@@ -32,18 +29,30 @@ PetMaps é uma aplicação destinada a moradores de São Carlos que perderam seu
   #### 3.1. login.html
    Botão 'Entrar', direcionando para a página inicio.html.
    Botão 'Se cadastre', direcionando para a página cadastro.html.
+   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/5c415ee3-03fb-4dd0-9c6e-7166cecc6553)
+
   #### 3.2. cadastro.html
    Botão 'Cadastrar', direnciando, quando as informações estiverem preenchidas e corretas, para a página login.html.
    Botão 'Faça Login', direcionando para a página login.html.
+   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/4bd4695c-5d6f-4cb6-b026-995434476c53)
+
   #### 3.3. inicio.html
    Botão 'Cadastrar PET', direcionando para a página cadastropets.html
    Botão 'Meus pets', direcionando para a página perfil.html.
+   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/bad6287f-6935-4950-957c-12ae175b6a3a)
+   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/7367921d-dea5-4cc2-8b87-06824b4bc50c)
+
+
   #### 3.4. perfil.html
    Botão 'excluir pet', eliminar o pet especificado da tabela e permacene na página perfil.html
    Botão 'voltar para página inicial', direcionando para a página inicio.html.
+   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/4d5bd114-22b1-4ba1-b1fb-78a0a13d4c10)
+
   #### 3.5. cadastropets.html
    Botão 'cadastrar pet', exibe a mensagem 'Pet cadastrado com sucesso' e permanece na pagina cadastropet.html
    Botão 'voltar para página inicial', direcionando para a página inicio.html.
+   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/67173a2e-efcd-4d74-acf4-86e9dca9c36c)
+
   
 
 ### 4. Funcionalidade de cada página:
