@@ -39,14 +39,20 @@ PetMaps é uma aplicação destinada a moradores de São Carlos que perderam seu
   #### 3.3. inicio.html
    Botão 'Cadastrar PET', direcionando para a página cadastropets.html
    Botão 'Meus pets', direcionando para a página perfil.html.
-   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/bad6287f-6935-4950-957c-12ae175b6a3a)
-   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/7367921d-dea5-4cc2-8b87-06824b4bc50c)
+   Botão 'Sair', direcionando para a página login.html
+   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/606d8b69-5cdc-4603-b8ca-10e3d1c7099d)
+   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/621f9b6d-8492-4bd0-9b64-2d3adaeebc5f)
+   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/a50d4da4-5778-47e4-aef9-bb442a99aa1a)
+
+
+
 
 
   #### 3.4. perfil.html
    Botão 'excluir pet', eliminar o pet especificado da tabela e permacene na página perfil.html
    Botão 'voltar para página inicial', direcionando para a página inicio.html.
-   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/4d5bd114-22b1-4ba1-b1fb-78a0a13d4c10)
+   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/a0d4e610-fd4c-4f3e-b18f-a684054570da)
+
 
   #### 3.5. cadastropets.html
    Botão 'cadastrar pet', exibe a mensagem 'Pet cadastrado com sucesso' e permanece na pagina cadastropet.html
@@ -76,18 +82,26 @@ PetMaps é uma aplicação destinada a moradores de São Carlos que perderam seu
 
 
 ## Como Rodar a Aplicação
-1. Certifique-se te ter o ambiente PyCharm instalado.
+1. Certifique-se te ter o ambiente PyCharm instalado em sua máquina.
 2. Certifique-se de ter o Python instalado em sua máquina.
-3. Clone este repositório para o seu ambiente local.
-4. Abra o terminal e navegue até o diretório do projeto.
-5. Abra este projeto e seu ambiente PyCharm.
-6. Faça a instalação dos pacotes necessários
-   6.1. Flask, com o comando 'pip install flask' em seu terminal.
-   6.2. MySQL, com o comando 'pip install mysql-connector-python' em seu terminal.
-7. Excecute o projeto, é necessário que apareça a página de login ao entrar o link.
-8. Faça seu cadastro clicando em 'se cadastre' e preeenchendo as informções.
-9. Com o cadastro feito, faça seu login.
-10. Assim que estiver na página principal, clique no botão 'cadastrar pet'.
+3. Certifique-se de ter o XAMPP instalado em sua máquina.
+4. Faça download tanto da pasta 'PetMaps.zip' como do 'cadastros.sql'.
+5. Extraia tudo do arquivo zip e tire o PetMaps de dentro da página que ficou a extração.
+6. Abra seu PyCharm, clique em 'New Project...', copie o caminho da pasta e cole no PyCharm.
+7. Configure a linguagem python na maquina.
+10. Faça a instalação dos pacotes necessários
+    10.1. Flask, com o comando 'pip install flask' em seu terminal.
+    10.2. MySQL, com o comando 'pip install mysql-connector-python' em seu terminal.
+11. Abra o XAMPP, dê 'start' no Apache e logo em seguida no MySQL.
+12. No MySQL, clique em 'Admin', deve abrir o localhost do banco de dados.
+    12.1. Se ocorrer algum erro, adicione ':8080' na frente do 'localhost'.
+13. Crie um banco de dados chamado 'cadastros'.
+14. Copie o conteúdo do arquivo 'cadastros' que você fez download, cole no SQL do banco de dados e depois execute'.
+15. Agora, com o banco de dados aberto, rode o projeto no PyCharm.
+    15. Inicie fazendo seu cadastro e em seguida o login para ter acesso a página principal.
+    16. Se quiser cadastrar ou ver quais pets você já cadastrou, clique em 'cadastre seu PET' ou 'Meus Pets'.
+    17. A barra ao lado permite realizar a filtragem por características.
+    18. O link em baixo de cada card, permite ver as informações do dono do pet.
 
 
 ## Licença
