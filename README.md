@@ -69,9 +69,9 @@ PetMaps, o projeto fictício de um curso de Python, é uma aplicação destinada
   #### 3.2. cadastro.html
    Fazer o cadastro do usuário para que o login possa ser feito.
   #### 3.3. inicio.html
-   Ter acesso a todos os animais cadastrados em todo o banco de dados e ter a possibilidade de filtrar essas informações com as segmentações.
+   Ter acesso a todos os animais cadastrados em todo o banco de dados.
   #### 3.4. perfil.html
-   Ter acesso e controle aos pets que o próprio usuário cadastrou, tendo a possibilidade de excluir caso o pet venha a falecer ou o pet já tnha encontrado seu dono.
+   Ter acesso e controle aos pets que o próprio usuário cadastrou, tendo a possibilidade de excluir caso o pet venha a falecer ou o pet já tenha encontrado seu dono.
   #### 3.5. cadastropets.html
    Cadastrar seus prórprios pets e também os pets que foram encontrados.
 
@@ -104,6 +104,12 @@ PetMaps, o projeto fictício de um curso de Python, é uma aplicação destinada
     13.2. Se quiser cadastrar ou ver quais pets você já cadastrou, clique em 'cadastre seu PET' ou 'Meus Pets'.
     13.3. A barra ao lado permite realizar a filtragem por características.
     13.4. O link em baixo de cada card, permite ver as informações do dono do pet.
+
+## Observações
+1. Rodar em mobile.
+2. Fazer a filtragem por segmentação.
+3. Adicionar a filtragem por reconhecimento facial.
+4. Adicionar páginas de ongs.
 
 
 ## Licença
