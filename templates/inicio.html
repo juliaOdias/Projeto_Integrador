@@ -280,35 +280,5 @@ async function mostrarInformacoes(pessoaId) {
         alert(error.message);
     }
 }
-    function submitForm() {
-    // Coleta os checkboxes marcados
-    const selectedFilters = {
-        idade: Array.from(document.querySelectorAll('input[name="idade"]:checked')).map(checkbox => checkbox.value),
-        cor: Array.from(document.querySelectorAll('input[name="color"]:checked')).map(checkbox => checkbox.value),  // Corrected the input name to match the form
-        especie: Array.from(document.querySelectorAll('input[name="especie"]:checked')).map(checkbox => checkbox.value),
-        genero: Array.from(document.querySelectorAll('input[name="genero"]:checked')).map(checkbox => checkbox.value),
-        porte: Array.from(document.querySelectorAll('input[name="porte"]:checked')).map(checkbox => checkbox.value),
-        castrado: Array.from(document.querySelectorAll('input[name="castrado"]:checked')).map(checkbox => checkbox.value),
-        situacao: Array.from(document.querySelectorAll('input[name="situacao"]:checked')).map(checkbox => checkbox.value)
-    };
-
-    // Envia a seleção de filtros para o servidor
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                const response = JSON.parse(xhr.responseText);
-                // Atualiza a exibição dos pets com base na resposta
-                updatePetCards(response.pets);
-            } else {
-                alert('Erro ao filtrar os pets.');
-            }
-        }
-    };
-
-    xhr.open('POST', '/filtrar_pets_por_cor_dos_olhos', true);  // Changed the endpoint to match your route
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify(selectedFilters));
-}
 </script>
 </html>
