@@ -1,0 +1,98 @@
+/* Estilos para o fundo */
+.background {
+    background-image: url('https://i.pinimg.com/1200x/7f/1c/20/7f1c2055c6b9068d135207ac563d7fe4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Estilos para o formulário */
+.add-pet-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 70%; /* Largura máxima do formulário reduzida */
+    max-width: 300px; /* Largura máxima do formulário reduzida */
+    padding: 5px; /* Espaçamento interno reduzido */
+    text-align: center; /* Centralizar o conteúdo horizontalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilos para o título do formulário */
+.add-pet-form h3 {
+    font-size: 14px; /* Tamanho do título reduzido */
+    margin-bottom: 4px; /* Espaçamento inferior reduzido */
+}
+
+/* Estilos para as etiquetas (labels) */
+.add-pet-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 2px; /* Espaçamento inferior reduzido */
+    font-size: 12px; /* Tamanho da fonte da etiqueta reduzido */
+}
+
+/* Estilos para os campos de entrada (inputs) e seleção (select) */
+.add-pet-form input[type="text"],
+.add-pet-form input[type="file"],
+.add-pet-form select {
+    width: 100%;
+    padding: 2px; /* Espaçamento interno reduzido */
+    margin-bottom: 3px; /* Espaçamento inferior reduzido */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px; /* Tamanho da fonte reduzido */
+}
+
+/* Estilos para o botão de cadastro */
+.add-pet-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 8px; /* Tamanho do botão reduzido */
+    cursor: pointer;
+    font-size: 14px; /* Tamanho da fonte reduzido */
+}
+
+/* Estilos para espaçamento entre campos */
+.add-pet-form .spacing {
+    margin-bottom: 3px; /* Espaçamento inferior reduzido */
+}
+
+/* Estilos para o perfil e formulário */
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 700px;
+}
+
+.profile-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.add-pet button {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}

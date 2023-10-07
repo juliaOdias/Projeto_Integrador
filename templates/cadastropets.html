@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="/static/perfil.css">
+</head>
+<style>
+    .background {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Estilos para a seção de perfil */
+.profile-container {
+    text-align: center;
+}
+
+/* Estilos para o botão de adicionar pet */
+.add-pet button {
+    font-size: 24px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.add-pet button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilos para a seção de mensagem */
+.message {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0e0e0;
+}
+
+/* Estilos para o formulário de cadastro de pet */
+.add-pet-form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-pet-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-pet-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.add-pet-form input,
+.add-pet-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-pet-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-pet-form button:hover {
+    background-color: #2980b9;
+}
+
+.add-pet-form a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+</style>
+<body>
+    <div class="background">
+    </div>
+    <div id="message" class="message" style="display: none;">
+    <p id="message-text"></p>
+    <button id="ok-button">OK</button>
+    </div>
+    <div class="add-pet-form" id="add-pet-form">
+        <h3>Cadastre seu Pet</h3>
+        <form action="/cadastro_pet" method="POST" enctype="multipart/form-data">
+            <label for="pet_image">Upload de Imagem:</label>
+            <input type="file" id="pet_image" name="pet_image" accept="image/*">
+
+            <label for="pet_name">Nome:</label>
+            <input type="text" id="pet_name" name="pet_name" required>
+
+            <label for="pet_race">Raça:</label>
+            <input type="text" id="pet_race" name="pet_race" required>
+
+            <label for="pet_species">Espécie:</label>
+            <select id="pet_species" name="pet_species">
+                <option value="gato">Gato</option>
+                <option value="cachorro">Cachorro</option>
+            </select>
+
+            <label for="pet_gender">Gênero:</label>
+            <select id="pet_gender" name="pet_gender">
+                <option value="macho">Macho</option>
+                <option value="femea">Fêmea</option>
+            </select>
+
+            <label for="pet_size">Porte:</label>
+            <select id="pet_size" name="pet_size">
+                <option value="pequeno">Pequeno</option>
+                <option value="medio">Médio</option>
+                <option value="grande">Grande</option>
+            </select>
+
+            <label for="pet_idade">Idade?</label>
+            <select id="pet_idade" name="pet_idade">
+                <option value="Filhote">Filhote</option>
+                <option value="Adulto">Adulto</option>
+                <option value="Sênior">Sênior</option>
+            </select>
+
+            <label for="pet_color">Cor:</label>
+             <select id="pet_color" name="pet_color">
+                <option value="Branco">Branco</option>
+                <option value="Preto">Preto</option>
+                <option value="laranja">Laranja</option>
+                <option value="Cinza">Cinza</option>
+                <option value="Duas Cores">Duas Cores</option>
+                <option value="Três Cores">Três Cores</option>
+                <option value="Quatro Cores">Quatro Cores</option>
+            </select>
+
+            <label for="pet_castrated">Castrado:</label>
+            <select id="pet_castrated" name="pet_castrated">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="pet_disease">Tem alguma doença? </label>
+            <select id="pet_disease" name="pet_disease">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="pet_medication">Faz uso de medicamentos? </label>
+            <select id="pet_medication" name="pet_medication">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="pet_aggressive">Agressivo?</label>
+            <select id="pet_aggressive" name="pet_aggressive">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="pet_eyes">Cor dos olhos?</label>
+            <select id="pet_eyes" name="pet_eyes">
+                <option value="Azul">Azul</option>
+                <option value="Verde">Verde</option>
+                <option value="Amarelo">Amarelo</option>
+                <option value="Castanho">Castanho</option>
+                <option value="Preto">Preto</option>
+                <option value="Heterocromia">Heterocromia</option>
+            </select>
+
+            <label for="pet_dono">Situação?</label>
+            <select id="pet_dono" name="pet_dono">
+                <option value="sim">Pet com dono</option>
+                <option value="nao">Pet perdido</option>
+            </select>
+
+            <button type="submit">Cadastrar Pet</button>
+        </form>
+         <a href="/inicio"><button>Volte à página inicial</button></a>
+    </div>
+</body>
+</html>

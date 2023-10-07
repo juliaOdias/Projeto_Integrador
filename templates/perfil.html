@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Pets</title>
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/736x/7f/1c/20/7f1c2055c6b9068d135207ac563d7fe4.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row; /* Alterado para row */
+      flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se não houver espaço suficiente */
+      align-items: flex-start; /* Alinha os itens no início da linha */
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px 0;
+      width: 300px;
+      background-color: white;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card-content {
+      margin-top: 10px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <div class="title">Meus Pets</div>
+
+      {% for pet in dados %}
+          <div class="card">
+              <h2>Dados Pet</h2>
+              <p><strong>Nome:</strong> {{ pet.nome }}</p>
+              <p><strong>Idade:</strong> {{ pet.idade }}</p>
+              <p><strong>Cor dos olhos:</strong> {{ pet.cordosolhos }}</p>
+              <p><strong>Espécie:</strong> {{ pet.especie }}</p>
+              <p><strong>Gênero:</strong> {{ pet.genero }}</p>
+              <p><strong>Porte:</strong> {{ pet.porte }}</p>
+              <p><strong>Castrado:</strong> {{ pet.castrado }}</p>
+              <p><strong>Cor:</strong> {{ pet.cor }}</p>
+              <p><strong>Usa medicamentos?</strong> {{ pet.medicamento }}</p>
+              <p><strong>Agressivo?</strong> {{ pet.agressivo }}</p>
+              <p><strong>Alguma doença?</strong> {{ pet.doenca }}</p>
+              <p><strong>Situacao?</strong> {{ pet.situacao }}</p>
+              <p><strong>ID</strong> {{ pet.id }}</p>
+              <form method="POST" action="/excluir_pet/{{ pet.id }}">
+                  <button type="submit" class="button">Excluir Pet</button>
+              </form>
+
+          </div>
+      {% endfor %}
+  </div>
+  <div class="button-container">
+    <p> <a href="/inicio" class="btn btn-link">Voltar para a página inicial</a></p>
+    <p> <a href="/cadastropets" class="btn btn-link">Cadastrar Pet</a></p>
+  </div>
+</body>
+</html>

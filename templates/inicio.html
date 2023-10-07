@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animais perdidos e achados</title>
+    <style>
+        body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         background-image: url('https://i.pinimg.com/1200x/7f/1c/20/7f1c2055c6b9068d135207ac563d7fe4.jpg');
+         height: 350vh;
+       }
+       header {
+         background-color: #333;
+         color: white;
+         text-align: center;
+         padding: 10px 0;
+       }
+       a[href="/"] {
+          background-color: #333;
+          color: white;
+          text-decoration: none; /* Remove o sublinhado padrão */
+          padding: 10px 20px;
+          border-radius: 5px;
+          transition: background-color 0.3s; /* Adiciona uma transição suave na mudança de cor de fundo */
+        }
+        a[href="/perfil"] {
+          background-color: #333;
+          color: white;
+          text-decoration: none; /* Remove o sublinhado padrão */
+          padding: 10px 20px;
+          border-radius: 5px;
+          transition: background-color 0.3s; /* Adiciona uma transição suave na mudança de cor de fundo */
+        }
+        a[href="/cadastropets"] {
+          background-color: #333;
+          color: white;
+          text-decoration: none; /* Remove o sublinhado padrão */
+          padding: 10px 20px;
+          border-radius: 5px;
+          transition: background-color 0.3s; /* Adiciona uma transição suave na mudança de cor de fundo */
+        }
+        a[href="/cadastropets"]:hover {
+          background-color: #555; /* Altere a cor de fundo ao passar o mouse */
+       }
+       a[href="/"]:hover {
+          background-color: #555; /* Altere a cor de fundo ao passar o mouse */
+       }
+       a[href="/perfil"]:hover {
+          background-color: #555; /* Altere a cor de fundo ao passar o mouse */
+       }
+       .container {
+         display: flex; /* Adiciona flex display */
+         max-width: 1000px; /* Aumenta a largura máxima para acomodar perguntas e imagens */
+         margin: 20px auto;
+         padding: 20px;
+         background-color: white;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+         border-radius: 10px;
+       }
+
+       .sidebar {
+         flex: 1; /* Define o tamanho da barra lateral */
+         padding-right: 20px; /* Espaçamento à direita para separar perguntas e imagens */
+         border-right: 1px solid #ccc; /* Adiciona uma borda à direita para separar visualmente */
+       }
+
+       .images {
+         flex: 2; /* Define o tamanho da seção de imagens */
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 20px;
+       }
+
+       ul {
+         list-style-type: none;
+         padding: 0;
+       }
+
+       li {
+         margin-left: -20px;
+       }
+
+       .search-bar {
+         display: flex;
+         margin-top: 20px;
+       }
+
+       .search-input {
+         flex: 1;
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 5px 0 0 5px;
+       }
+
+       .search-button {
+         background-color: #333;
+         color: white;
+         border: none;
+         border-radius: 0 5px 5px 0;
+         padding: 10px 20px;
+         cursor: pointer;
+       }
+
+       .images {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 20px;
+       }
+
+        .card {
+         width: 100%;
+         padding: 20px;
+         margin: 10px 0;
+         background-color: #f9f9f9;
+         border-radius: 10px;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+       }
+
+       .card img {
+         max-width: 100%;
+         margin-bottom: 10px;
+         border-radius: 10px;
+       }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Animais perdidos e achados</h1>
+    <a href="/perfil">Meus Pets</a>
+    <a href="/cadastropets">Cadastre seu PET</a>
+    <a href="/">Sair</a>
+</header>
+<div class="container">
+    <div class="sidebar">
+        <div class="personal-info">
+            <h2>Dados Pessoais</h2>
+            <p><strong>Nome:</strong> {{ pessoa.nome }}</p>
+            <p><strong>Email:</strong> {{ pessoa.email }}</p>
+            <p><strong>Telefone:</strong> {{ pessoa.telefone }}</p>
+            <p><strong>Bairro:</strong> {{ pessoa.bairro }}</p>
+        </div>
+        <h2>Dados Pet</h2>
+        <div class="question">
+            <h3>Idade</h3>
+            <form id="idadeForm" method="POST">
+                <label><input type="checkbox" name="idade" value="Filhote" onclick="submitForm()">Filhote</label><br>
+                <label><input type="checkbox" name="idade" value="Adulto" onclick="submitForm()">Adulto</label><br>
+                <label><input type="checkbox" name="idade" value="Idoso" onclick="submitForm()">Idoso</label><br>
+            </form>
+        </div>
+        <div class="question">
+            <h3>Cor dos olhos</h3>
+            <form id="colorForm" method="POST">
+                <label><input type="checkbox" name="color" value="Azul" onclick="submitForm()">Azul</label><br>
+                <label><input type="checkbox" name="color" value="Verde" onclick="submitForm()">Verde</label><br>
+                <label><input type="checkbox" name="color" value="Amarelo" onclick="submitForm()">Amarelo</label><br>
+                <label><input type="checkbox" name="color" value="Castanho" onclick="submitForm()">Castanho</label><br>
+                <label><input type="checkbox" name="color" value="Heterocromia" onclick="submitForm()">Heterocromia</label><br>
+                <label><input type="checkbox" name="color" value="Preto" onclick="submitForm()">Preto</label><br>
+            </form>
+        </div>
+        <div class="question">
+            <h3>Espécie</h3>
+            <form id="especieForm" method="POST">
+                <label><input type="checkbox" name="especie" value="Gato" onclick="submitForm()"> Gato</label><br>
+                <label><input type="checkbox" name="especie" value="Cachorro" onclick="submitForm()"> Cachorro</label>
+            </form>
+        </div>
+        <div class="question" method="POST">
+            <h3>Gênero</h3>
+            <form id="generoForm" method="POST">
+                <label><input type="checkbox" name="genero" value="Macho" onclick="submitForm()"> Macho</label><br>
+                <label><input type="checkbox" name="genero" value="Fêmea" onclick="submitForm()"> Fêmea</label>
+            </form>
+        </div>
+        <div class="question">
+            <h3>Porte</h3>
+            <form id="porteForm" method="POST">
+                <label><input type="checkbox" name="porte" value="Pequeno" onclick="submitForm()"> Pequeno</label><br>
+                <label><input type="checkbox" name="porte" value="Médio" onclick="submitForm()"> Médio</label><br>
+                <label><input type="checkbox" name="porte" value="Grande" onclick="submitForm()"> Grande</label>
+            </form>
+        </div>
+        <div class="question">
+            <h3>Castrado</h3>
+            <form id="castradoForm" method="POST">
+                <label><input type="checkbox" name="castrado" value="Sim" onclick="submitForm()"> Sim</label><br>
+                <label><input type="checkbox" name="castrado" value="Não" onclick="submitForm()"> Não</label>
+            </form>
+        </div>
+        <div class="question">
+            <h3>Cor</h3>
+            <form id="corForm" method="POST">
+                <label><input type="checkbox" name="cor" value="Preto" onclick="submitForm()"> Preto</label><br>
+                <label><input type="checkbox" name="cor" value="Branco" onclick="submitForm()"> Branco</label><br>
+                <label><input type="checkbox" name="cor" value="Duas cores" onclick="submitForm()"> Duas cores</label><br>
+                <label><input type="checkbox" name="cor" value="Três cores" onclick="submitForm()"> Três cores</label><br>
+                <label><input type="checkbox" name="cor" value="Quatro cores" onclick="submitForm()"> Quatro cores</label><br>
+                <label><input type="checkbox" name="cor" value="Laranja" onclick="submitForm()"> Laranja</label><br>
+                <label><input type="checkbox" name="cor" value="Cinza" onclick="submitForm()"> Cinza</label>
+            </form>
+        </div>
+        <div class="question">
+            <h3>Situação</h3>
+            <form id="situacaoForm" method="POST">
+                <label><input type="checkbox" name="situacao" value="Pet com dono" onclick="submitForm()"> Pet com dono</label><br>
+                <label><input type="checkbox" name="situacao" value="Pet perdido" onclick="submitForm()"> Pet perdido</label>
+            </form>
+        </div>
+    </div>
+    <div class="images">
+        {% for dados in pets %}
+            <div class="card" style="width: 40rem;">
+                <img class="card-img-top">
+                <p><img src="{{ url_for('static', filename='images/' + dados.imagem) }}"/> </p>
+                <div class="card-body">
+                    <p><strong>Nome:</strong> {{ dados.nome }}</p>
+                    <p><strong>Idade:</strong> {{ dados.idade }}</p>
+                    <p><strong>Cor dos olhos:</strong> {{ dados.cordosolhos }}</p>
+                    <p><strong>Espécie:</strong> {{ dados.especie }}</p>
+                    <p><strong>Gênero:</strong> {{ dados.genero }}</p>
+                    <p><strong>Porte:</strong> {{ dados.porte }}</p>
+                    <p><strong>Castrado:</strong> {{ dados.castrado }}</p>
+                    <p><strong>Cor:</strong> {{ dados.cor }}</p>
+                    <p><strong>Usa medicamentos?</strong> {{ dados.medicamento }}</p>
+                    <p><strong>Agressivo?</strong> {{ dados.agressivo }}</p>
+                    <p><strong>Alguma doença?</strong> {{ dados.doenca }}</p>
+                    <p><strong>Situação?</strong> {{ dados.situacao }}</p>
+                    <p><strong>Dono</strong> {{ dados.pessoa_id }}</p>
+                    <a href="#" class="btn btn-primary" onclick="mostrarInformacoes({{dados.pessoa_id}})">Mais informações</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+
+<script>
+function buscarUsuarioPorId(pessoaId) {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    const pessoa = JSON.parse(xhr.responseText);
+                    resolve(pessoa);
+                } else {
+                    reject('Erro ao buscar informações do usuário.');
+                }
+            }
+        };
+
+        xhr.open('GET', `/buscar_usuario_por_id?pessoaId=${pessoaId}`, true);
+        xhr.send();
+    });
+}
+
+async function mostrarInformacoes(pessoaId) {
+    try {
+        const response = await fetch(`/buscar_usuario_por_id?pessoa_id=${pessoaId}`);
+        if (!response.ok) {
+            throw new Error('Erro ao buscar informações do usuário.');
+        }
+
+        const pessoa = await response.json();
+
+        alert(`
+            <h2>Dados Pessoais</h2>
+            <p><strong>Nome:</strong> ${pessoa.nome}</p>
+            <p><strong>Email:</strong> ${pessoa.email}</p>
+            <p><strong>Telefone:</strong> ${pessoa.telefone}</p>
+            <p><strong>Bairro:</strong> ${pessoa.bairro}</p>
+        `);
+    } catch (error) {
+        alert(error.message);
+    }
+}
+    function submitForm() {
+    // Coleta os checkboxes marcados
+    const selectedFilters = {
+        idade: Array.from(document.querySelectorAll('input[name="idade"]:checked')).map(checkbox => checkbox.value),
+        cor: Array.from(document.querySelectorAll('input[name="color"]:checked')).map(checkbox => checkbox.value),  // Corrected the input name to match the form
+        especie: Array.from(document.querySelectorAll('input[name="especie"]:checked')).map(checkbox => checkbox.value),
+        genero: Array.from(document.querySelectorAll('input[name="genero"]:checked')).map(checkbox => checkbox.value),
+        porte: Array.from(document.querySelectorAll('input[name="porte"]:checked')).map(checkbox => checkbox.value),
+        castrado: Array.from(document.querySelectorAll('input[name="castrado"]:checked')).map(checkbox => checkbox.value),
+        situacao: Array.from(document.querySelectorAll('input[name="situacao"]:checked')).map(checkbox => checkbox.value)
+    };
+
+    // Envia a seleção de filtros para o servidor
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                // Atualiza a exibição dos pets com base na resposta
+                updatePetCards(response.pets);
+            } else {
+                alert('Erro ao filtrar os pets.');
+            }
+        }
+    };
+
+    xhr.open('POST', '/filtrar_pets_por_cor_dos_olhos', true);  // Changed the endpoint to match your route
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(selectedFilters));
+}
+</script>
+</html>
