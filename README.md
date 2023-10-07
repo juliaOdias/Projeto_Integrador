@@ -76,11 +76,11 @@ PetMaps, o projeto fictício de um curso de Python, é uma aplicação destinada
    Cadastrar seus prórprios pets e também os pets que foram encontrados.
 
 ## Requisitos Não Funcionais
- Performance: A aplicação deve ser responsiva, minimizando a latência durante a execução do código.
- Usabilidade: A interface deve ser intuitiva e fácil de usar, especialmente para iniciantes.
- Escalabilidade: A aplicação deve suportar um aumento no número de usuários e pets cadastrados sem comprometer a qualidade.
- Segurança: Garantir a segurança dos dados dos usuários e evitar vulnerabilidades.
- Compatibilidade: Funcionar em diversos navegadores e sistemas operacionais.
+- Performance: A aplicação deve ser responsiva, minimizando a latência durante a execução do código.
+- Usabilidade: A interface deve ser intuitiva e fácil de usar, especialmente para iniciantes.
+- Escalabilidade: A aplicação deve suportar um aumento no número de usuários e pets cadastrados sem comprometer a qualidade.
+- Segurança: Garantir a segurança dos dados dos usuários e evitar vulnerabilidades.
+- Compatibilidade: Funcionar em diversos navegadores e sistemas operacionais.
 
 
 ## Como Rodar a Aplicação
