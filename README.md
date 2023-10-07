@@ -87,23 +87,23 @@ PetMaps, o projeto fictício de um curso de Python, é uma aplicação destinada
 1. Certifique-se te ter o ambiente PyCharm instalado em sua máquina.
 2. Certifique-se de ter o Python instalado em sua máquina.
 3. Certifique-se de ter o XAMPP instalado em sua máquina.
-4. Faça download tanto da pasta 'PetMaps.zip' como do 'cadastros.sql'.
-5. Extraia tudo do arquivo zip e tire o PetMaps de dentro da página que ficou a extração.
-6. Abra seu PyCharm, clique em 'New Project...', copie o caminho da pasta e cole no PyCharm.
+4. Faça download tanto dos arquivos 'static', 'templates' e 'Inicio.py' e coloque em uma pasta, crie a pasta com o nome ' PetMaps'
+5. Faça download do 'cadastros.sql'.
+6. . Abra seu PyCharm, clique em 'New Project...', copie o caminho da pasta e cole no PyCharm.
 7. Configure a linguagem python na maquina.
-10. Faça a instalação dos pacotes necessários
-    10.1. Flask, com o comando 'pip install flask' em seu terminal.
-    10.2. MySQL, com o comando 'pip install mysql-connector-python' em seu terminal.
-11. Abra o XAMPP, dê 'start' no Apache e logo em seguida no MySQL.
-12. No MySQL, clique em 'Admin', deve abrir o localhost do banco de dados.
-    12.1. Se ocorrer algum erro, adicione ':8080' na frente do 'localhost'.
-13. Crie um banco de dados chamado 'cadastros'.
-14. Copie o conteúdo do arquivo 'cadastros' que você fez download, cole no SQL do banco de dados e depois execute'.
-15. Agora, com o banco de dados aberto, rode o projeto no PyCharm.
-    15. Inicie fazendo seu cadastro e em seguida o login para ter acesso a página principal.
-    16. Se quiser cadastrar ou ver quais pets você já cadastrou, clique em 'cadastre seu PET' ou 'Meus Pets'.
-    17. A barra ao lado permite realizar a filtragem por características.
-    18. O link em baixo de cada card, permite ver as informações do dono do pet.
+8. Faça a instalação dos pacotes necessários
+    8.1. Flask, com o comando 'pip install flask' em seu terminal.
+    8.2. MySQL, com o comando 'pip install mysql-connector-python' em seu terminal.
+9. Abra o XAMPP, dê 'start' no Apache e logo em seguida no MySQL.
+10. No MySQL, clique em 'Admin', deve abrir o localhost do banco de dados.
+    10.1. Se ocorrer algum erro, adicione ':8080' na frente do 'localhost'.
+11. Crie um banco de dados chamado 'cadastros'.
+12. Copie o conteúdo do arquivo 'cadastros' que você fez download, cole no SQL do banco de dados e depois execute'.
+13. Agora, com o banco de dados aberto, rode o projeto no PyCharm.
+    13.1. Inicie fazendo seu cadastro e em seguida o login para ter acesso a página principal.
+    13.2. Se quiser cadastrar ou ver quais pets você já cadastrou, clique em 'cadastre seu PET' ou 'Meus Pets'.
+    13.3. A barra ao lado permite realizar a filtragem por características.
+    13.4. O link em baixo de cada card, permite ver as informações do dono do pet.
 
 
 ## Licença
