@@ -2,7 +2,7 @@
 
 ## Descrição
 
-PetMaps é uma aplicação destinada a moradores de São Carlos que perderam seus animais de estimação, sendo restrito a gatos ou cachorros, a intenção principal é resolver o problema da feira do rolo onde é feita a postagem de diversos animais e dificilmente se acha o dono. Com esta aplicação será possível o usuário fazer o cadastro de seus pets e aplicar a opção 'meu pet' ou 'pet encontrado', assim as pessoas poderão fazer uma busca com filtragem por cor, idade, raça, genero e afins para facilitar a localização do pet
+PetMaps, o projeto fictício de um curso de Python, é uma aplicação destinada a moradores de São Carlos que perderam seus animais de estimação, sendo restrito a gatos ou cachorros, a intenção principal é resolver o problema da feira do rolo onde é feita a postagem de diversos animais e dificilmente se acha o dono. Com esta aplicação será possível o usuário fazer o cadastro de seus pets e aplicar a opção 'meu pet' ou 'pet encontrado', assim as pessoas poderão fazer uma busca com filtragem por cor, idade, raça, genero e afins para facilitar a localização do pet
 
 ## Requisitos Funcionais
 
@@ -51,7 +51,8 @@ PetMaps é uma aplicação destinada a moradores de São Carlos que perderam seu
   #### 3.4. perfil.html
    Botão 'excluir pet', eliminar o pet especificado da tabela e permacene na página perfil.html
    Botão 'voltar para página inicial', direcionando para a página inicio.html.
-   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/a0d4e610-fd4c-4f3e-b18f-a684054570da)
+   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/997c1ced-08cd-48f8-880b-46b46aa6610d)
+
 
 
   #### 3.5. cadastropets.html
@@ -67,7 +68,7 @@ PetMaps é uma aplicação destinada a moradores de São Carlos que perderam seu
   #### 3.2. cadastro.html
    Fazer o cadastro do usuário para que o login possa ser feito.
   #### 3.3. inicio.html
-   Ter acesso a todos os animais cadastrados em todo o banco de dados e ter a possibilidade de filtrar essas informações com as segmentações disponibilizada e também por comparação de imagens.
+   Ter acesso a todos os animais cadastrados em todo o banco de dados e ter a possibilidade de filtrar essas informações com as segmentações.
   #### 3.4. perfil.html
    Ter acesso e controle aos pets que o próprio usuário cadastrou, tendo a possibilidade de excluir caso o pet venha a falecer ou o pet já tnha encontrado seu dono.
   #### 3.5. cadastropets.html
