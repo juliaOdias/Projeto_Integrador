@@ -29,7 +29,8 @@ PetMaps, o projeto fictício de um curso de Python, é uma aplicação destinada
   #### 3.1. login.html
    Botão 'Entrar', direcionando para a página inicio.html.
    Botão 'Se cadastre', direcionando para a página cadastro.html.
-   ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/5c415ee3-03fb-4dd0-9c6e-7166cecc6553)
+  ![image](https://github.com/juliaOdias/Projeto_Integrador/assets/130238194/d5ecc540-8ba8-4cbc-85e9-59d6ed138e3f)
+
 
   #### 3.2. cadastro.html
    Botão 'Cadastrar', direnciando, quando as informações estiverem preenchidas e corretas, para a página login.html.
